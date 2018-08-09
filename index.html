@@ -1,33 +1,131 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1">
-<title>Toad</title>
-<style>
-html, body{
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
 
-body{
-  font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
-  overflow: hidden;
-  background: #666;
-  text-align: center;
-  -moz-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
-}
-</style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, initial-scale=1, maximum-scale=1">
+    <title>Toad</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            font-family: Tahoma, Verdana, Arial, Helvetica, sans-serif;
+            overflow: hidden;
+            -moz-user-select: none;
+            -webkit-user-select: none;
+            user-select: none;
+            background: #ffffff;
+            text-align: center;
+            width: 550px;
+            max-width: 100%;
+            margin: auto;
+            -webkit-font-smoothing: subpixel-antialiased;
+        }
+
+        input,
+        textarea,
+        p,
+        a,
+        div {
+            font-family: "Microsoft Yahei";
+            font-size: 1.5rem;
+            color: #000000;
+            line-height: 2rem;
+            letter-spacing: 1px;
+            -webkit-appearance: none;
+        }
+
+        #title {
+            font-size: 2.5rem;
+            margin: 80px 0 40px 0;
+            font-weight: bold;
+        }
+
+        .box {
+            margin: 20px 10px;
+            text-align: left;
+            border-bottom: 1px solid #eeeeee;
+        }
+
+        .desc {
+            color: #999999;
+            font-size: 1.2rem;
+        }
+
+        #copyright {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            color: #999999;
+            font-size: 1rem;
+            padding: 50px 0;
+        }
+
+
+
+
+        .btn {
+            text-decoration: none;
+            color: #2E64FE;
+            background: transparent;
+            outline: none;
+            border: 0;
+            cursor: pointer;
+            padding: 5px 2px;
+            float: right;
+            margin: 2px 2px;
+        }
+
+        p {
+            text-align: left;
+            padding: 2px;
+            box-sizing: border-box;
+        }
+    </style>
 </head>
+
 <body>
-<script>
-window.onload = function() {
-  ToadMenu && ToadMenu.displayItem(9, '反馈/留言', 'https://www.mohu.club/m/article/170');
-};
-</script>
+    <!-- <div id="title">膜乎/辱乎/品葱 安卓免翻墙App</div> -->
+    <div>
+        <div class="box">
+            <a class="btn" href="https://www.mohu.club/">进入</a>
+            <p>膜乎</p>
+            <p class="desc">https://www.mohu.club/</p>
+        </div>
+        <div class="box">
+            <a class="btn" href="https://www.ruhu.ml/">进入</a>
+            <p>辱乎</p>
+            <p class="desc">https://www.ruhu.ml/</p>
+        </div>
+        <div class="box">
+            <a class="btn" href="https://www.pin-cong.com/">进入</a>
+            <p>品葱</p>
+            <p class="desc">https://www.pin-cong.com/</p>
+        </div>
+        <div class="box">
+            <a class="btn" href="https://www.mohu.club/m/article/170">进入</a>
+            <p>反馈/留言</p>
+            <p class="desc">https://www.mohu.club/m/article/170</p>
+        </div>
+        <div class="box">
+            <a class="btn" href="https://github.com/toadapp/toad-android">进入</a>
+            <p>关于...</p>
+            <p class="desc">https://github.com/toadapp/toad-android</p>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function () {
+            ToadMenu && ToadMenu.displayItem(9, '反馈/留言', 'https://www.mohu.club/m/article/170');
+        };
+    </script>
 </body>
+
 </html>
