@@ -68,9 +68,6 @@
             padding: 50px 0;
         }
 
-
-
-
         .btn {
             text-decoration: none;
             color: #2E64FE;
@@ -97,31 +94,37 @@
         <div class="box">
             <a class="btn" href="https://www.mohu.club/">进入</a>
             <p>膜乎</p>
-            <p class="desc">https://www.mohu.club/</p>
+            <p class="desc"></p>
         </div>
         <div class="box">
             <a class="btn" href="https://www.ruhu.ml/">进入</a>
             <p>辱乎</p>
-            <p class="desc">https://www.ruhu.ml/</p>
+            <p class="desc"></p>
         </div>
         <div class="box">
             <a class="btn" href="https://www.pin-cong.com/">进入</a>
             <p>品葱</p>
-            <p class="desc">https://www.pin-cong.com/</p>
+            <p class="desc"></p>
         </div>
         <div class="box">
             <a class="btn" href="https://www.mohu.club/m/article/170">进入</a>
             <p>反馈/留言</p>
-            <p class="desc">https://www.mohu.club/m/article/170</p>
+            <p class="desc"></p>
         </div>
         <div class="box">
             <a class="btn" href="https://github.com/toadapp/toad-android">进入</a>
             <p>关于...</p>
-            <p class="desc">https://github.com/toadapp/toad-android</p>
+            <p class="desc"></p>
         </div>
     </div>
 
     <script>
+        var btns = document.getElementsByClassName("btn");
+        var descs = document.getElementsByClassName("desc")
+        for (var i = 0; i < Math.max(btns.length, descs.length); i++) {
+            descs[i].innerHTML = btns[i].href;
+        }
+
         window.onload = function () {
             ToadMenu && ToadMenu.displayItem(9, '反馈/留言', 'https://www.mohu.club/m/article/170');
         };
