@@ -107,13 +107,13 @@
             <p class="desc"></p>
         </div>
         <div class="box">
-            <a class="btn" href="https://www.mohu.club/m/article/170">进入</a>
-            <p>反馈/留言</p>
+            <a class="btn" href="https://www.reddit.com/r/saraba1st/">进入</a>
+            <p>第三新S1市</p>
             <p class="desc"></p>
         </div>
         <div class="box">
-            <a class="btn" href="https://github.com/toadapp/toad-android">进入</a>
-            <p>关于...</p>
+            <a class="btn" href="https://www.mohu.club/m/article/170">进入</a>
+            <p>反馈/留言</p>
             <p class="desc"></p>
         </div>
     </div>
@@ -125,8 +125,30 @@
             descs[i].innerHTML = btns[i].href;
         }
 
+        var random = function(len) {
+            return Math.floor(Math.random() * len);
+        };
+
         window.onload = function () {
-            ToadMenu && ToadMenu.displayItem(9, '反馈/留言', 'https://www.mohu.club/m/article/170');
+            if (ToadHosts) {
+                var list = [
+                    "151.101.1.140",
+                    "151.101.25.140",
+                    "151.101.41.140",
+                    "151.101.73.140",
+                    "151.101.89.140"
+                ], len = list.length;
+                ToadHosts.set("(.*\\.|)reddit\\.com", list[random(len)]);
+                ToadHosts.set("(.*\\.|)redditmedia\\.com", list[random(len)]);
+                ToadHosts.set("(.*\\.|)redd\\.it", list[random(len)]);
+                ToadHosts.set("(.*\\.|)redditstatic\\.com", list[random(len)]);
+                ToadHosts.set("(.*\\.|)reddituploads\\.com", list[random(len)]);
+                ToadHosts.set("(.*\\.|)redditinc\\.com", list[random(len)]);
+            }
+            if (ToadMenu) {
+                ToadMenu.displayItem(8, '第三新S1市', 'https://www.reddit.com/r/saraba1st/');
+                ToadMenu.displayItem(9, '反馈/留言', 'https://www.mohu.club/m/article/170');
+            }
         };
     </script>
 </body>
