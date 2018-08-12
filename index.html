@@ -107,7 +107,7 @@
             <p class="desc"></p>
         </div>
         <div class="box">
-            <a class="btn" href="https://www.reddit.com/r/saraba1st/">进入</a>
+            <a class="btn" href="https://www.reddit.com/r/saraba1st/.compact">进入</a>
             <p>第三新S1市</p>
             <p class="desc"></p>
         </div>
@@ -130,7 +130,7 @@
         };
 
         window.onload = function () {
-            if (ToadHosts) {
+            if (window.ToadHosts) {
                 var list = [
                     "151.101.1.140",
                     "151.101.25.140",
@@ -145,9 +145,9 @@
                 ToadHosts.set("(.*\\.|)reddituploads\\.com", list[random(len)]);
                 ToadHosts.set("(.*\\.|)redditinc\\.com", list[random(len)]);
             }
-            if (ToadMenu) {
-                ToadMenu.displayItem(8, '第三新S1市', 'https://www.reddit.com/r/saraba1st/');
-                ToadMenu.displayItem(9, '反馈/留言', 'https://www.mohu.club/m/article/170');
+            if (window.ToadMenu) {
+                ToadMenu.displayItem(9, '第三新S1市', 'https://www.reddit.com/r/saraba1st/.compact');
+                ToadMenu.displayItem(10, '反馈/留言', 'https://www.mohu.club/m/article/170');
             }
         };
     </script>
