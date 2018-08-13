@@ -97,8 +97,8 @@
             <p class="desc"></p>
         </div>
         <div class="box">
-            <a class="btn" href="https://www.ruhu.ml/">进入</a>
-            <p>辱乎</p>
+            <a class="btn" href="https://ruhu.eu-gb.mybluemix.net/">进入</a>
+            <p>辱乎（备用站点）</p>
             <p class="desc"></p>
         </div>
         <div class="box">
@@ -119,12 +119,6 @@
     </div>
 
     <script>
-        var btns = document.getElementsByClassName("btn");
-        var descs = document.getElementsByClassName("desc")
-        for (var i = 0; i < Math.max(btns.length, descs.length); i++) {
-            descs[i].innerHTML = btns[i].href;
-        }
-
         var random = function(len) {
             return Math.floor(Math.random() * len);
         };
@@ -144,10 +138,18 @@
                 ToadHosts.set("(.*\\.|)redditstatic\\.com", list[random(len)]);
                 ToadHosts.set("(.*\\.|)reddituploads\\.com", list[random(len)]);
                 ToadHosts.set("(.*\\.|)redditinc\\.com", list[random(len)]);
+                ToadHosts.set("(.*\\.|)eu-gb\\.mybluemix\\.net", "169.50.73.249");
             }
             if (window.ToadMenu) {
+                ToadMenu.displayItem(3, '辱乎', 'https://ruhu.eu-gb.mybluemix.net/');
                 ToadMenu.displayItem(9, '第三新S1市', 'https://www.reddit.com/r/saraba1st/.compact');
                 ToadMenu.displayItem(10, '反馈/留言', 'https://www.mohu.club/m/article/170');
+            }
+
+            var btns = document.getElementsByClassName("btn");
+            var descs = document.getElementsByClassName("desc")
+            for (var i = 0; i < Math.max(btns.length, descs.length); i++) {
+                descs[i].innerHTML = btns[i].href;
             }
         };
     </script>
