@@ -107,6 +107,11 @@
             <p class="desc"></p>
         </div>
         <div class="box">
+            <a class="btn" href="https://zh.wikipedia.org/">进入</a>
+            <p>中文维基百科</p>
+            <p class="desc"></p>
+        </div>
+        <div class="box">
             <a class="btn" href="https://www.reddit.com/r/saraba1st/.compact">进入</a>
             <p>第三新S1市</p>
             <p class="desc"></p>
@@ -139,9 +144,12 @@
                 ToadHosts.set("(.*\\.|)reddituploads\\.com", list[random(len)]);
                 ToadHosts.set("(.*\\.|)redditinc\\.com", list[random(len)]);
                 ToadHosts.set("(.*\\.|)eu-gb\\.mybluemix\\.net", "169.50.73.249");
+                ToadHosts.set("(.*\\.|)wikipedia\\.org", "91.198.174.192");
+                ToadHosts.set("(.*\\.|)wikinews\\.org", "91.198.174.192");
             }
             if (window.ToadMenu) {
                 ToadMenu.displayItem(3, '辱乎', 'https://ruhu.eu-gb.mybluemix.net/');
+                ToadMenu.displayItem(5, '中文维基百科', 'https://zh.wikipedia.org/');
                 ToadMenu.displayItem(9, '第三新S1市', 'https://www.reddit.com/r/saraba1st/.compact');
                 ToadMenu.displayItem(10, '反馈/留言', 'https://www.mohu.club/m/article/170');
             }
