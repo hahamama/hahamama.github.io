@@ -89,26 +89,35 @@
 </head>
 
 <body>
-    <!-- <div id="title">膜乎/辱乎/品葱 安卓免翻墙App</div> -->
     <div>
         <div class="box">
-            <a class="btn" href="https://www.mohu.club/">进入</a>
-            <p>膜乎</p>
+            <a class="btn" href="https://pincong.rocks/">进入</a>
+            <p>新品葱</p>
             <p class="desc"></p>
         </div>
         <div class="box">
-            <a class="btn" href="https://www.pin-cong.com/">进入</a>
-            <p>品葱</p>
+            <a class="btn" href="https://mohubackup.github.io/">进入</a>
+            <p>膜乎备份</p>
+            <p class="desc"></p>
+        </div>
+        <div class="box">
+            <a class="btn" href="https://8ch.net/mohu/">进入</a>
+            <p>膜乎8Chan</p>
+            <p class="desc"></p>
+        </div>
+        <div class="box">
+            <a class="btn" href="https://terminus2049.github.io/">进入</a>
+            <p>端点星</p>
+            <p class="desc"></p>
+        </div>
+        <div class="box">
+            <a class="btn" href="https://www.reddit.com/r/saraba1st/.compact">进入</a>
+            <p>第三新S1市（墙）</p>
             <p class="desc"></p>
         </div>
         <div class="box">
             <a class="btn" href="https://zh.wikipedia.org/">进入</a>
             <p>中文维基百科</p>
-            <p class="desc"></p>
-        </div>
-        <div class="box">
-            <a class="btn" href="https://terminus2049.github.io/">进入</a>
-            <p>端点星计划</p>
             <p class="desc"></p>
         </div>
     </div>
@@ -120,17 +129,25 @@
 
         window.onload = function () {
             if (window.ToadHosts) {
+                ToadHosts.set("(.*\\.|)pincong\\.rocks", "1.0.0.1");
+                ToadHosts.set("(.*\\.|)8ch\\.net", "1.0.0.1");
+                ToadHosts.set("(.*\\.|)8chan\\.net", "1.0.0.1");
                 ToadHosts.set("(.*\\.|)wikipedia\\.org", "en.wikipedia.org");
                 ToadHosts.set("(.*\\.|)wikinews\\.org", "en.wikipedia.org");
             }
             if (window.ToadMenu) {
-                ToadMenu.hideItem(3);
-                ToadMenu.displayItem(5, '中文维基百科', 'https://zh.wikipedia.org/');
-                ToadMenu.displayItem(10, '反馈/留言', 'https://www.mohu.club/question/3477');
+                ToadMenu.displayItem(2, '新品葱', 'https://pincong.rocks/');
+                ToadMenu.displayItem(3, '膜乎备份', 'https://mohubackup.github.io/');
+                ToadMenu.displayItem(4, '膜乎8Chan', 'https://8ch.net/mohu/');
+                ToadMenu.displayItem(5, '端点星', 'https://terminus2049.github.io/');
+                ToadMenu.displayItem(6, '第三新S1市（墙）', 'https://www.reddit.com/r/saraba1st/.compact');
+                ToadMenu.displayItem(7, '中文维基百科', 'https://zh.wikipedia.org/');
+                ToadMenu.displayItem(9, '反馈/留言', 'https://pincong.rocks/question/847');
+                ToadMenu.hideItem(10);
             }
 
             var btns = document.getElementsByClassName("btn");
-            var descs = document.getElementsByClassName("desc")
+            var descs = document.getElementsByClassName("desc");
             for (var i = 0; i < Math.max(btns.length, descs.length); i++) {
                 descs[i].innerHTML = btns[i].href;
             }
